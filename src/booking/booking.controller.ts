@@ -9,6 +9,7 @@ export class BookingController implements OnModuleInit {
     private readonly bookingService: BookingService,
   ) {}
 
+  //
   onModuleInit() {
     this.redis.subscribe('Ticket');
     this.redis.on('message', async (channel, message) => {
